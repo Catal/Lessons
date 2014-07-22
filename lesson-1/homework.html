@@ -63,9 +63,8 @@
 
         function getSelectedCost()
         {
-          var obj = document.form1.select;
+          var obj = document.getElementById("select_id");
           var val = obj.options[obj.selectedIndex].index;
-          // document.write(price[val]);
           document.getElementById("text").innerHTML =  "<h3>" + price[val] + "円</h3>";
         }
 
@@ -73,7 +72,7 @@
 
       <div class="col-md-6">
       <form name="form1">
-      <select name="select" class="form-control">
+      <select class="form-control" name="select" id="select_id">
         <option>MacBook Air 11inch</option>
         <option>MacBook Air 13inch</option>
         <option>MacBook Pro Retina 13inch</option>
@@ -86,6 +85,7 @@
       </div>
       </form>
       <div id="text"></div> 
+
 
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
