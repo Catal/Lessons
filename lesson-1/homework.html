@@ -65,7 +65,8 @@
         {
           var obj = document.form1.select;
           var val = obj.options[obj.selectedIndex].index;
-          document.write(price[val]);
+          // document.write(price[val]);
+          document.getElementById("text").innerHTML =  "<h3>" + price[val] + "円</h3>";
         }
 
       </script>
@@ -81,7 +82,7 @@
       <input type="button" value="料金表示" onClick="getSelectedCost()" class="btn btn-primary">
       </form>
 
-
+      <div id="text"></div> 
 
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
