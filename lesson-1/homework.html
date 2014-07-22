@@ -1,7 +1,10 @@
+
 <html>
   <head>
     <title>Homework</title>
     <link rel="stylesheet" href="http://twitter.github.com/bootstrap/2.3.2/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="/Users/indigolain/Desktop/bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
     <h1>アップル製品の価格調査</h1>
@@ -11,11 +14,29 @@
 
         for(var i=0; i<5; i++){
           if(price[i] < 100000){
-            document.write(product[i] + "は" + price[i] + "円です。10万円以下<br>"); 
+            document.write(product[i] + "は" + price[i] + "円です。10万円以下<br>");
           }else{
-            document.write(product[i] + "は" + price[i] + "円です。10万円以上<br>"); 
+            document.write(product[i] + "は" + price[i] + "円です。10万円以上<br>");
           }
-        }      
+        }
+
+        function getSelectedCost(obj)
+        {
+          var val = obj.options[obj.selectedIndex].index;
+          return price [val];
+        }
       </script>
+
+
+      <select onchange="alert('これは' + getSelectedCost(this) + '円');">
+        <option>MacBook Air 11inch</option>
+        <option>MacBook Air 13inch</option>
+        <option>MacBook Pro Retina 13inch</option>
+        <option>MacBook Pro Retina 15inch</option>
+        <option>iMac 21.5inch</option>
+      </select>
+
+
+
   </body>
 </html>
