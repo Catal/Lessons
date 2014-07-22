@@ -53,15 +53,39 @@
         var product = ["MacBook Air 11inch","MacBook Air 13inch","MacBook Pro Retina 13inch","MacBook Pro Retina 15inch", "iMac 21.5inch"];
         var price = [88800, 98800, 128800, 194800, 108800];
 
-        for(var i=0; i<5; i++){
-          if(price[i] < 100000){
-            document.write(product[i] + "は" + price[i] + "円です。10万円以下<br>");
-          }else{
-            document.write(product[i] + "は" + price[i] + "円です。10万円以上<br>");
-          }
+        // for(var i=0; i<5; i++){
+        //   if(price[i] < 100000){
+        //     document.write(product[i] + "は" + price[i] + "円です。10万円以下<br>");
+        //   }else{
+        //     document.write(product[i] + "は" + price[i] + "円です。10万円以上<br>");
+        //   }
+        // }
+
+        function getSelectedCost()
+        {
+          var obj = document.getElementById("select_id");
+          var val = obj.options[obj.selectedIndex].index;
+          document.getElementById("text").innerHTML =  "<h3>" + price[val] + "円</h3>";
         }
 
       </script>
+
+      <div class="col-md-6">
+      <form name="form1">
+      <select class="form-control" name="select" id="select_id">
+        <option>MacBook Air 11inch</option>
+        <option>MacBook Air 13inch</option>
+        <option>MacBook Pro Retina 13inch</option>
+        <option>MacBook Pro Retina 15inch</option>
+        <option>iMac 21.5inch</option>
+      </select>
+      </div>
+      <div class="col-md-3">
+      <input type="button" value="料金表示" onClick="getSelectedCost()" class="btn btn-primary">
+      </div>
+      </form>
+      <div id="text"></div> 
+
 
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
