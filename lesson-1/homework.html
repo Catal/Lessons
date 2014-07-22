@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoemwork</title>
+    <title>Homework</title>
 
     <!-- Bootstrap -->
     <link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
@@ -48,6 +48,7 @@
         </tr>
       </tbody>
     </table>
+
     <script type="text/javascript">
         var product = ["MacBook Air 11inch","MacBook Air 13inch","MacBook Pro Retina 13inch","MacBook Pro Retina 15inch", "iMac 21.5inch"];
         var price = [88800, 98800, 128800, 194800, 108800];
@@ -60,22 +61,28 @@
         //   }
         // }
 
-        function getSelectedCost(obj)
+        function getSelectedCost()
         {
+          var obj = document.form1.select;
           var val = obj.options[obj.selectedIndex].index;
-          return price [val];
+          document.write(price[val]);
         }
 
       </script>
 
-
-      <select onchange="alert('これは' + getSelectedCost(this) + '円');">
+      <form name="form1">
+      <select name="select">
         <option>MacBook Air 11inch</option>
         <option>MacBook Air 13inch</option>
         <option>MacBook Pro Retina 13inch</option>
         <option>MacBook Pro Retina 15inch</option>
         <option>iMac 21.5inch</option>
       </select>
+      <input type="button" value="料金表示" onClick="getSelectedCost()">
+      </form>
+
+
+
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
