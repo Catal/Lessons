@@ -1,0 +1,25 @@
+<h3>Listing Notes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>date</th>
+      <th>title</th>
+      <th>body</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.id %></td>
+        <td><%= note.date.strftime('%Y-%m-%d') %></td>
+        <td><%= note.title %></td>
+        <td><%= note.body.html_safe %></td>
+        <td><%= link_to 'Show', note %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
