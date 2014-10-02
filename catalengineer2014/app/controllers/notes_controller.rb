@@ -1,4 +1,9 @@
 class NotesController < ApplicationController
+
+  def show
+    @note = Note.find(params[:id])
+  end
+  
   def new
     @note = Note.new  
   end
@@ -15,5 +20,5 @@ class NotesController < ApplicationController
   def note_params
     params.require(:note).permit(:title, :body, :date)
   end
-  
+
 end

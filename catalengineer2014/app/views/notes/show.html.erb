@@ -1,0 +1,11 @@
+<h3>Title</h3>
+<%= @note.title %>
+
+<h3>Date</h3>
+<%= @note.date %>
+
+<h3>Body</h3>
+<%= @note.body.html_safe %>
+
+<br>
+<%= link_to 'Back', notes_path %>
