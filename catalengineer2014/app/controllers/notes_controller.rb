@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
 
-  def index 
+  def index
     @notes = Note.all
   end
 
@@ -9,7 +9,7 @@ class NotesController < ApplicationController
   end
 
   def new
-    @note = Note.new  
+    @note = Note.new
   end
 
   def create
@@ -18,6 +18,19 @@ class NotesController < ApplicationController
      redirect_to @note
     else
       render :new
+    end
+  end
+
+  def edit
+    @note = Note.find(params[:id])
+  end
+
+  def update
+    @note = Note.find(params[:id])
+    if @note.update(note_params)
+      redirect_to @note
+    else
+      render :edit
     end
   end
 
