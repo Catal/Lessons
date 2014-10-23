@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  #root :to => "notes#index"
+  devise_for :users
+  root :to => "notes#index"
   resources :notes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
