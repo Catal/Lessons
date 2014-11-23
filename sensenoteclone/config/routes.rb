@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  routes : 'notes#index'
+  
+  get '/notes/takeshi', to: 'notes#takeshi'
+
+  root :to => "notes#index"
+
   resources :profiles
 
   resources :groups
