@@ -1,9 +1,9 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
-  def takeshi
-
-  end
+def takeshi
+  @takeshi_notes = Note.where(:title => "hello")
+end
   
   # GET /notes
   # GET /notes.json
