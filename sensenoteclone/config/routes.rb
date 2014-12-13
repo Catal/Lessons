@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   get '/notes/takeshi', to: 'notes#takeshi'
 
   root :to => "notes#index"
