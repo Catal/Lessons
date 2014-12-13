@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20141212042220) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
->>>>>>> FETCH_HEAD
 
   create_table "groups", force: true do |t|
     t.string   "name"
