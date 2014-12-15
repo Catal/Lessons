@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'nprogress-rails'
+gem 'font-awesome-rails'
 gem 'twitter-bootswatch-rails', '~> 3.1.1'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'less-rails'
