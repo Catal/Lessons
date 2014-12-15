@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 20141212042220) do
     t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "indigolain"
   end
 
   create_table "profiles", force: true do |t|

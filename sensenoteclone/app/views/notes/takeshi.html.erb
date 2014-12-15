@@ -1,5 +1,5 @@
-<html>
-  <body>
-    Hello, my name is takeshi
-  </body>
-</html>
+<% @takeshi_notes.each do |note| %>
+  <%= note.title %><br>
+  <%= note.body %><br>
+  <%= note.date %><br>
+<% end %>
