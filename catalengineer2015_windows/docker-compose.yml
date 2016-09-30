@@ -1,0 +1,13 @@
+db:
+  image: sqlite3
+  ports:
+    - "5432"
+web:
+  build: .
+  command: bundle exec rails s -p 3000 -b '0.0.0.0'
+  volumes:
+    - .:/catalengineer2015
+  ports:
+    - "3000:3000"
+  links:
+    - db
