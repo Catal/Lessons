@@ -1,3 +1,0 @@
-// Lumen
-// Bootswatch
-// bootswatch.js
